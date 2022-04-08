@@ -3,6 +3,14 @@ import json
 data = json.load(open("D:\PycharmProjects\AdvancePythonPractice\pandas-moneycontrol\data\stock_prices.json"))
 print(data)
 
+processed_data = {}
+for item in data.keys():
+    processed_data[item.lower()] = data[item]
+
+def target_hit():
+    print(f"Time to buy {stock_name}")
+    print(f"{stock_name}'s  Last Traded Price : {processed_data[stock_name]}")
+
 #user input for checking stock price:
 def stock_input():
     stock_name = input("Enter the Company's name: ").lower()
@@ -18,17 +26,13 @@ def stock_input():
 def stock_comparision(stock_name,stock_price):
     print(stock_name,stock_price)
 
-    processed_data = {}
-    for item in data.keys():
-        processed_data[item.lower()] = data[item]
     if stock_name in processed_data.keys():
         if ',' in processed_data[stock_name]:
             market_price = float(processed_data[stock_name].replace(',',''))
         else:
             market_price = float(processed_data[stock_name])
         if stock_price>market_price:
-            print(f"Time to buy {stock_name}")
-            print(f"{stock_name}'s  Last Traded Price : {processed_data[stock_name]}")
+            target_hit()
         else:
             print("Price criteria not satisfied")
     else:
