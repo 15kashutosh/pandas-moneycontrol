@@ -43,3 +43,4 @@ stock_name,stock_price = stock_input()
 stock_comparision(stock_name,stock_price)
 
 print("Learning git push")
+#2
