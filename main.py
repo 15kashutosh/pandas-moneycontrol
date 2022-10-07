@@ -24,3 +24,4 @@ json_obj = json.dumps(company_prices)
 with open("D:\PycharmProjects\AdvancePythonPractice\pandas-moneycontrol\data\stock_prices.json", "w") as file:
     file.write(json_obj)
 
+print("Hi")
