@@ -25,3 +25,4 @@ with open("D:\PycharmProjects\AdvancePythonPractice\pandas-moneycontrol\data\sto
     file.write(json_obj)
 
 print("Hi")
+print("Learning git commit")

@@ -41,3 +41,5 @@ def stock_comparision(stock_name,stock_price):
 #Function call for stock comparision and dispalying results:
 stock_name,stock_price = stock_input()
 stock_comparision(stock_name,stock_price)
+
+print("Learning git push")
